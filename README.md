@@ -73,8 +73,8 @@ As shown below, currently we assign the “candidate_name” and “county_name�
         county_name = row[1]
 -  If you want capture more data from the voters in .csv file, such as count of  gender, age group ,etc. you could expand the list of variables like previous code and modify the current loop script by adding more if statement inside it 
 
-    # For each row in the CSV file.
-    for row in reader:
+        # For each row in the CSV file.
+        for row in reader:
 
         # Add to the total vote count
         total_votes = total_votes + 1
