@@ -13,6 +13,8 @@ A Colorado Board of Elections employee has given us the following tasks to compl
 - Data Source: election_results.csv
 - Software: Python 3.7.6. 64bit, Visual Studio Code, 1.54.3
 
+## Results
+
 ## Summary
 The analysis of the election show that:
 
