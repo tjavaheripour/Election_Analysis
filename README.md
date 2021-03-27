@@ -63,6 +63,8 @@ The script can be easily modified and used for any other election:
         # Add a variable to save the file to a path.
         file_to_save = os.path.join("analysis", "election_analysis.txt")
 
+-  The row function returns the values from a row with a particular index, for example  ‘candidate_name = row[2]’ shows that the third column of worksheet related to names of candidates, if we decide to run this election audit from another csv file with different structure or maybe new coulmns, we should make sure that the address of variable name match correctly with the column on the csv file to dreive data.
+As shown below, currently we assign the “candidate_name” and “county_name” variables with their location in the row:
 
         # Get the candidate name from each row.
         candidate_name = row[2]
