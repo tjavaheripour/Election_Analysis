@@ -71,3 +71,43 @@ As shown below, currently we assign the “candidate_name” and “county_name�
 
         # 3: Extract the county name from each row.
         county_name = row[1]
+-  If you want capture more data from the voters in .csv file, such as count of  gender, age group ,etc. you could expand the list of variables like previous code and modify the current loop script by adding more if statement inside it 
+
+    # For each row in the CSV file.
+    for row in reader:
+
+        # Add to the total vote count
+        total_votes = total_votes + 1
+
+        # Get the candidate name from each row.
+        candidate_name = row[2]
+
+        # 3: Extract the county name from each row.
+        county_name = row[1]
+
+        # If the candidate does not match any existing candidate add it to
+        # the candidate list
+        if candidate_name not in candidate_options:
+
+            # Add the candidate name to the candidate list.
+            candidate_options.append(candidate_name)
+
+            # And begin tracking that candidate's voter count.
+            candidate_votes[candidate_name] = 0
+
+        # Add a vote to that candidate's count
+        candidate_votes[candidate_name] += 1
+
+        # 4a: Write an if statement that checks that the
+        # county does not match any existing county in the county list.
+        if county_name not in county_list:
+
+            # 4b: Add the existing county to the list of counties.
+
+            county_list.append(county_name)
+            # 4c: Begin tracking the county's vote count.
+            county_votes[county_name] = 0
+
+
+        # 5: Add a vote to that county's vote count.
+        county_votes[county_name] +=1
