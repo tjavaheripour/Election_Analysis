@@ -48,6 +48,11 @@ The analyses of the election show that
 
 - The county with the highest turnout was:
   - Denver, which received 82.8% of the total votes and 306,055 number of votes.
+
+Here, you can see the results of election_audit after running the code:
+
+![election results.png](https://github.com/tjavaheripour/Election_Analysis/blob/main/election%20results.PNG)
+
 ## Summary
 
 
