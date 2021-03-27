@@ -58,10 +58,10 @@ The script can be easily modified and used for any other election:
 
 -	This script pulls data from the election_data.csv file, you can change the source of .csv file on the code by use of “ file_to_load” variable to be assigned with a different file for a specific election data.Also, you can use file_to_save variable to create a file to keep the result of this particular election . As you can see in the screenshot below:
 
-# Add a variable to load a file from a path.
-file_to_load = os.path.join("Resources", "election_results.csv")
-# Add a variable to save the file to a path.
-file_to_save = os.path.join("analysis", "election_analysis.txt")
+        # Add a variable to load a file from a path.
+        file_to_load = os.path.join("Resources", "election_results.csv")
+        # Add a variable to save the file to a path.
+        file_to_save = os.path.join("analysis", "election_analysis.txt")
 
 
         # Get the candidate name from each row.
