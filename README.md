@@ -56,22 +56,23 @@ Here, you can see the results of election_audit after running the code:
 ## Summary
 The script can be easily modified and used for any other election:
 
--	This script pulls data from the election_data.csv file, you can change the source of .csv file on the code by use of “ file_to_load” variable to be assigned with a different file for a specific election data.Also, you can use file_to_save variable to create a file to keep the result of this particular election . As you can see in the screenshot below:
+-	This script pulls data from the election_data.csv file; you can change the source of .csv file in the code where you assign “ file_to_load” variable.To do so, you update the “Resource” and “election-results.csv” values to reflect the path to the folder and of the CSV file respectively.
+Same applies to file_to_save where analysis is the path of the output folder and election_analysis.txt is the name of output file:
 
         # Add a variable to load a file from a path.
         file_to_load = os.path.join("Resources", "election_results.csv")
         # Add a variable to save the file to a path.
         file_to_save = os.path.join("analysis", "election_analysis.txt")
 
--  The row function returns the values from a row with a particular index, for example  ‘candidate_name = row[2]’ shows that the third column of worksheet related to names of candidates, if we decide to run this election audit from another csv file with different structure or maybe new coulmns, we should make sure that the address of variable name match correctly with the column on the csv file to dreive data.
-As shown below, currently we assign the “candidate_name” and “county_name” variables with their location in the row:
+-  The row function returns the values from a row with a particular index. For example ‘candidate_name = row[2]’ shows that the third column of worksheet corresponding to the names of candidates. If we need to run this election audit for another CSV file with different structure, we need to make sure that the row index in the function refers to the correct column in the CSV file.
 
         # Get the candidate name from each row.
         candidate_name = row[2]
 
         # 3: Extract the county name from each row.
         county_name = row[1]
--  If you want capture more data from the voters in .csv file, such as count of  gender, age group ,etc. you could expand the list of variables like previous code and modify the current loop script by adding more if statement inside it 
+        
+-   you want to capture more data from the voters in .csv file, such as count of gender, age group ,etc. you could expand the list of variables like previous code and modify the current loop script by adding more if statement inside it.
 
         # For each row in the CSV file.
         for row in reader:
